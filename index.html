@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+      function isValid() {
+        var pwd = document.getElementById("login").value;
+        switch (pwd) {
+          case "test1":
+            window.open("https://www.google.com/", "_blank").focus();
+            break;
+          case "test2":
+            window.open("https://www.google.com/", "_blank").focus();
+            break;
+          case "test3":
+            window.open("https://www.google.com/", "_blank").focus();
+            break;
+          case "test4":
+            window.open("https://www.google.com/", "_blank").focus();
+            break;
+          case "test5":
+            window.open("https://www.google.com/", "_blank").focus();
+            break;
+          case "test6":
+            window.open("https://www.google.com/", "_blank").focus();
+            break;
+          default:
+            alert("niepoprawny kod, spróbuj ponownie");
+        }
+      }
+
+      function enter(element) {
+        if (event.key === "Enter") {
+          isValid();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img class="logo" src="logo.png" />
+      <div class="row1"></div>
+      <a class="info"
+        >aby uzyskać dostęp do ankiety, podaj hasło otrzymane w mailu</a
+      >
+      <form class="f1">
+        <input
+          class="text"
+          id="login"
+          name="login"
+          type="text"
+          placeholder="wpisz kod"
+          onkeydown="enter(this)"
+        />
+      </form>
+      <button class="dalej" onclick="isValid();">dalej</button>
+    </div>
+  </body>
+</html>
